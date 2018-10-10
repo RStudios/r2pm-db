@@ -1,0 +1,15 @@
+name: evm
+type: git
+repo: https://github.com/radare/radare2-extras
+desc: "[r2-arch] Ethereum VM disassembler, analyzer, io and debugger plugins"
+
+install: 
+  - cd libr
+  - make clean
+  - make -C p
+  - make evm
+  - make evm-install
+  
+
+uninstall:
+  - make -C p uninstall
